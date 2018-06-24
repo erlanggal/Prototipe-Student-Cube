@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Profil</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+  <link rel='stylesheet prefetch' href='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css'>
+  <link rel='stylesheet prefetch' href='https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css'>
+  <link rel="stylesheet" th:href="@{/css/style.css}">
+
+  <script src="js/jquery-3.3.1.min.js"></script>
+  <script src="js/tether.min.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+  <script src="js/fontawesome-all.js"></script>
+</head>
+
+
+
+<body class="sidebar-is-reduced">
+  <header class="l-header">
+    <div class="l-header__inner clearfix">
+      <div class="c-header-icon js-hamburger">
+        <div class="hamburger-toggle">
+          <span class="bar-top"></span>
+          <span class="bar-mid"></span>
+          <span class="bar-bot"></span>
+        </div>
+      </div>
+      <!-- <div class="c-search">
+          <input class="c-search__input u-input" placeholder="Search..." type="text" />
+        </div> -->
+      <div class="header-icons-group">
+        <div class="c-header-icon logout">
+          <i class="fa fa-power-off"></i>
+        </div>
+      </div>
+    </div>
+  </header>
+  <div class="l-sidebar">
+    <div class="logo">
+      <div class="logo__txt">SC</div>
+    </div>
+    <div class="l-sidebar__content">
+      <nav class="c-menu js-menu">
+        <ul class="u-list">
+          <li class="c-menu__item has-submenu" data-toggle="tooltip" title="Beranda">
+            <div class="c-menu__item__inner">
+              <i class="fa fa-home"></i>
+              <div class="c-menu-item__title">
+                <span>
+                  <a th:href="@{'index'}">Beranda</a>
+                </span>
+              </div>
+            </div>
+          </li>
+          <li class="c-menu__item has-submenu" data-toggle="tooltip" title="Notifikasi">
+            <div class="c-menu__item__inner">
+              <i class="fa fa-bell"></i>
+              <div class="c-menu-item__title">
+                <span>
+                  <a th:href="@{'notifikasi'}">Notifikasi</a>
+                </span>
+              </div>
+            </div>
+          </li>
+          <li class="c-menu__item has-submenu" data-toggle="tooltip" title="Pekerjaan">
+            <div class="c-menu__item__inner">
+              <i class="fas fa-briefcase "></i>
+              <div class="c-menu-item__title">
+                <span>
+                  <a th:href="@{'pekerjaan'}">Pekerjaan</a>
+                </span>
+              </div>
+            </div>
+          </li>
+          <li class="c-menu__item is-active" data-toggle="tooltip" title="Profil">
+            <div class="c-menu__item__inner">
+              <i class="fa fa-user"></i>
+              <div class="c-menu-item__title">
+                <span>
+                  <a th:href="@{'profil'}">Profil</a>
+                </span>
+              </div>
+            </div>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </div>
+</body>
+
+<main class="l-main">
+  <div class="content-wrapper content-wrapper--with-bg">
+    <h1 class="page-title">Pekerjaan</h1>
+    <div class="col-md-4">
+      <div class="d-flex flex-column">
+        <div class="profile-picture">
+          <i class="fa fa-user"></i>
+          <br>
+        </div>
+
+        <div class="profile-name">
+          <p>Erlangga Laimena</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-md-8">
+      <div class="user-information">
+        <table>
+          <tr>
+            <td>Telepon</td>
+            <td>000000000000</td>
+          </tr>
+
+          <tr>
+            <td>Email</td>
+            <td>erlanggalaimena@gmail.com</td>
+          </tr>
+
+          <tr>
+            <td>Kemampuan</td>
+            <td>Kemampuan A</td>
+          </tr>
+
+          <tr>
+            <td></td>
+            <td>Kemampuan B</td>
+          </tr>
+
+
+          <tr>
+            <td></td>
+            <td>Kemampuan C</td>
+          </tr>
+
+          <tr>
+            <td></td>
+            <td>Kemampuan D</td>
+          </tr>
+
+          <tr>
+            <td>CV</td>
+            <td><a th:href="@{'file/CV Example.pdf'}" download="CV Erlangga" style="color: red"><i class="far fa-file-pdf"></i></a></td>
+          </tr>
+        </table>
+      </div>
+    </div>
+  </div>
+</main>
+
+<script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js'></script>
+<script src='https://use.fontawesome.com/releases/v5.0.8/js/all.js'></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js'></script>
+<script src="js/index.js"></script>
+</body>
+</html>
