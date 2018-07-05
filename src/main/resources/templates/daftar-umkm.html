@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Daftar UMKM</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+    <link rel='stylesheet prefetch' href='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css'>
+    <link rel='stylesheet prefetch' href='https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css'>
+    <link rel="stylesheet" th:href="@{/css/style.css}">
+
+    <script src="js/jquery-3.3.1.min.js"></script>
+    <script src="js/tether.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/fontawesome-all.js"></script>
+</head>
+
+
+
+<body class="sidebar-is-reduced">
+<header class="l-header">
+    <div class="l-header__inner clearfix">
+        <div class="c-header-icon js-hamburger">
+            <div class="hamburger-toggle">
+                <span class="bar-top"></span>
+                <span class="bar-mid"></span>
+                <span class="bar-bot"></span>
+            </div>
+        </div>
+        <!-- <div class="c-search">
+      <input class="c-search__input u-input" placeholder="Search..." type="text" />
+    </div> -->
+        <div class="header-icons-group">
+            <div class="c-header-icon logout">
+                <i class="fa fa-power-off"></i>
+            </div>
+        </div>
+    </div>
+</header>
+<div class="l-sidebar">
+    <div class="logo">
+        <div class="logo__txt">SC</div>
+    </div>
+    <div class="l-sidebar__content">
+        <nav class="c-menu js-menu">
+            <ul class="u-list">
+                <li class="c-menu__item has-submenu" data-toggle="tooltip" title="Beranda">
+                    <a th:href="@{'index'}">
+                        <div class="c-menu__item__inner">
+                            <i class="fa fa-home"></i>
+                            <div class="c-menu-item__title">
+                                    <span>
+                                        Beranda
+                                    </span>
+                            </div>
+                        </div>
+                    </a>
+                </li>
+                <li class="c-menu__item has-submenu" data-toggle="tooltip" title="Notifikasi">
+                    <a th:href="@{'kotak-masuk'}">
+                        <div class="c-menu__item__inner">
+                            <i class="fa fa-bell"></i>
+                            <div class="c-menu-item__title">
+                                    <span>
+                                        Kotak Masuk
+                                    </span>
+                            </div>
+                        </div>
+                    </a>
+                </li>
+                <li class="c-menu__item is-active" data-toggle="tooltip" title="Pekerjaan">
+                    <a th:href="@{'kategori-umkm'}">
+                        <div class="c-menu__item__inner">
+                            <i class="fas fa-briefcase "></i>
+                            <div class="c-menu-item__title">
+                                    <span>
+                                        UMKM
+                                    </span>
+                            </div>
+                        </div>
+                    </a>
+                </li>
+                <li class="c-menu__item has-submenu" data-toggle="tooltip" title="Profil">
+                    <a th:href="@{'profil'}">
+                        <div class="c-menu__item__inner">
+                            <i class="fa fa-user"></i>
+                            <div class="c-menu-item__title">
+                                    <span>
+                                        Profil
+                                    </span>
+                            </div>
+                        </div>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+    </div>
+</div>
+</body>
+
+<main class="l-main">
+    <div class="content-wrapper content-wrapper--with-bg">
+        <h1 class="page-title">Pangan</h1>
+        <div class="col-md-12">
+            <div class="umkm-description">
+                <a th:href="@{'detail-umkm'}">
+                    <table>
+                        <tr>
+                            <td colspan="2">Keripik Padasuka</td>
+                        </tr>
+
+                        <tr>
+                            <td>Lokasi</td>
+                            <td>Jakarta</td>
+                        </tr>
+
+                        <tr>
+                            <td>Deskripsi</td>
+                            <td>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur dictum enim et mi sollicitudin,
+                                id convallis est efficitur. Etiam laoreet porta faucibus. Vivamus mattis magna finibus ultrices
+                                pretium. Donec non mattis turpis. Sed hendrerit, dui et finibus interdum, ex nulla ultrices
+                                ipsum, id pretium mauris diam eu ipsum ...</td>
+                        </tr>
+                    </table>
+                </a>
+            </div>
+
+            <div class="umkm-description space-between-div-top">
+                <a th:href="@{'detail-umkm'}">
+                    <table>
+                        <tr>
+                            <td colspan="2">Nasi Kotak Valen</td>
+                        </tr>
+
+                        <tr>
+                            <td>Lokasi</td>
+                            <td>Bekasi</td>
+                        </tr>
+
+                        <tr>
+                            <td>Deskripsi</td>
+                            <td>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur dictum enim et mi sollicitudin,
+                                id convallis est efficitur. Etiam laoreet porta faucibus. Vivamus mattis magna finibus ultrices
+                                pretium. Donec non mattis turpis. Sed hendrerit, dui et finibus interdum, ex nulla ultrices
+                                ipsum, id pretium mauris diam eu ipsum ...</td>
+                        </tr>
+                    </table>
+                </a>
+            </div>
+
+            <div class="umkm-description space-between-div-top">
+                <a th:href="@{'detail-umkm'}">
+                    <table>
+                        <tr>
+                            <td colspan="2">Sambal Matah Ojolali</td>
+                        </tr>
+
+                        <tr>
+                            <td>Lokasi</td>
+                            <td>Jakarta</td>
+                        </tr>
+
+                        <tr>
+                            <td>Deskripsi</td>
+                            <td>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur dictum enim et mi sollicitudin,
+                                id convallis est efficitur. Etiam laoreet porta faucibus. Vivamus mattis magna finibus ultrices
+                                pretium. Donec non mattis turpis. Sed hendrerit, dui et finibus interdum, ex nulla ultrices
+                                ipsum, id pretium mauris diam eu ipsum ...</td>
+                        </tr>
+                    </table>
+                </a>
+            </div>
+        </div>
+    </div>
+</main>
+
+<script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js'></script>
+<script src='https://use.fontawesome.com/releases/v5.0.8/js/all.js'></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js'></script>
+<script src="js/index.js"></script>
+</body>
+
+</html>

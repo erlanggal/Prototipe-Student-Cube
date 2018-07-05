@@ -45,44 +45,52 @@
       <nav class="c-menu js-menu">
         <ul class="u-list">
           <li class="c-menu__item is-active" data-toggle="tooltip" title="Beranda">
-            <div class="c-menu__item__inner">
-              <i class="fa fa-home"></i>
-              <div class="c-menu-item__title">
-                <span>
-                  <a th:href="@{'index'}">Beranda</a>
-                </span>
+            <a th:href="@{'index'}">
+              <div class="c-menu__item__inner">
+                <i class="fa fa-home"></i>
+                <div class="c-menu-item__title">
+                  <span>
+                    Beranda
+                  </span>
+                </div>
               </div>
-            </div>
+            </a>
           </li>
           <li class="c-menu__item has-submenu" data-toggle="tooltip" title="Notifikasi">
-            <div class="c-menu__item__inner">
-              <i class="fa fa-bell"></i>
-              <div class="c-menu-item__title">
-                <span>
-                  <a th:href="@{'notifikasi'}">Notifikasi</a>
-                </span>
+            <a th:href="@{'kotak-masuk'}">
+              <div class="c-menu__item__inner">
+                <i class="fa fa-bell"></i>
+                <div class="c-menu-item__title">
+                  <span>
+                    Kotak Masuk
+                  </span>
+                </div>
               </div>
-            </div>
+            </a>
           </li>
           <li class="c-menu__item has-submenu" data-toggle="tooltip" title="Pekerjaan">
-            <div class="c-menu__item__inner">
-              <i class="fas fa-briefcase "></i>
-              <div class="c-menu-item__title">
-                <span>
-                  <a th:href="@{'pekerjaan'}">Pekerjaan</a>
-                </span>
+            <a th:href="@{'kategori-umkm'}">
+              <div class="c-menu__item__inner">
+                <i class="fas fa-briefcase "></i>
+                <div class="c-menu-item__title">
+                  <span>
+                    UMKM
+                  </span>
+                </div>
               </div>
-            </div>
+            </a>
           </li>
           <li class="c-menu__item has-submenu" data-toggle="tooltip" title="Profil">
-            <div class="c-menu__item__inner">
-              <i class="fa fa-user"></i>
-              <div class="c-menu-item__title">
-                <span>
-                  <a th:href="@{'profil'}">Profil</a>
-                </span>
+            <a th:href="@{'profil'}">
+              <div class="c-menu__item__inner">
+                <i class="fa fa-user"></i>
+                <div class="c-menu-item__title">
+                  <span>
+                    Profil
+                  </span>
+                </div>
               </div>
-            </div>
+            </a>
           </li>
         </ul>
       </nav>
@@ -92,54 +100,101 @@
 
 <main class="l-main">
   <div class="content-wrapper content-wrapper--with-bg">
-    <h1 class="page-title">Beranda</h1>
     <div class="row">
-      <div class="col-style col-md-12">
-        <div class="page-content" style="border: none;">
-          <h1>Selamat Datang, Erlangga!</h1>
+      <div class="col-md-6">
+        <div class="cardboards">
+          <h1>Keripik Padasuka</h1>
           <hr>
-          <h2>Anda memiliki 3 notifikasi baru.</h2>
+
+          <div class="cardboard">
+            <table>
+              <tr>
+                <td colspan="2">Pemantauan kualitas bahan baku</td>
+              </tr>
+
+              <tr>
+                <td>Tanggal</td>
+                <td class="custom-width-td">05-07-2018</td>
+              </tr>
+
+              <tr>
+                <td>Keterangan</td>
+                <td class="custom-width-td">-</td>
+              </tr>
+            </table>
+          </div>
+
+          <div class="cardboard space-between-div-top">
+            <table>
+              <tr>
+                <td colspan="2">Pembahasan strategi pemasaran</td>
+              </tr>
+
+              <tr>
+                <td>Tanggal</td>
+                <td class="custom-width-td">03-07-2018</td>
+              </tr>
+
+              <tr>
+                <td>Keterangan</td>
+                <td class="custom-width-td">-</td>
+              </tr>
+            </table>
+          </div>
+
+          <div class="cardboard space-between-div-top">
+            <table>
+              <tr>
+                <td colspan="2">Pertemuan dengan pemilik Keripik Padasuka</td>
+              </tr>
+
+              <tr>
+                <td>Tanggal</td>
+                <td class="custom-width-td">30-06-2018</td>
+              </tr>
+
+              <tr>
+                <td>Keterangan</td>
+                <td class="custom-width-td">
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam quis vulputate est, nec sagittis tellus. Curabitur quis
+                  sem in sem pulvinar lobortis ut vitae quam. Nulla pulvinar dictum ante, eu molestie enim tincidunt ac.
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit.</td>
+              </tr>
+            </table>
+          </div>
+
+          <div class="add-card-button">
+            <p>
+              <a th:href="@{'card-board'}">
+                <i class="fas fa-plus-circle"></i>
+              </a>
+            </p>
+          </div>
         </div>
       </div>
-      <div class="col-style col-md-12">
-        <div class="col-style col-md-3">
-          <div class="page-content">
-            <h1>Nama_Perusahaan 1</h1>
-            <hr>
-            <h2>Gaji</h2>
-            <h2>Deskripsi</h2>
-            <h2>Waktu_Mulai - Waktu_Selesai</h2>
+
+
+      <div class="col-md-1"></div>
+
+      <div class="col-md-3">
+        <div class="laporan-keuangan">
+          <h1>Laporan Keuangan</h1>
+          <br>
+
+          <div class="chart-button">
+            <a th:href="@{/file/laporanKeuangan.xlsx}" download="Laporan Keuangan">
+              <i class="fas fa-chart-line"></i>
+            </a>
           </div>
-        </div>
-        <div class="col-style col-md-3">
-          <div class="page-content">
-            <h1>Nama_Perusahaan 2</h1>
-            <hr>
-            <h2>Gaji</h2>
-            <h2>Deskripsi</h2>
-            <h2>Waktu_Mulai - Waktu_Selesai</h2>
-          </div>
-        </div>
-        <div class="col-style col-md-3">
-          <div class="page-content">
-            <h1>Nama_Perusahaan 3</h1>
-            <hr>
-            <h2>Gaji</h2>
-            <h2>Deskripsi</h2>
-            <h2>Waktu_Mulai - Waktu_Selesai</h2>
-          </div>
-        </div>
-        <div class="col-style col-md-3">
-          <div class="page-content">
-            <h1>Nama_Perusahaan 4</h1>
-            <hr>
-            <h2>Gaji</h2>
-            <h2>Deskripsi</h2>
-            <h2>Waktu_Mulai - Waktu_Selesai</h2>
+          <br>
+
+          <div style="text-align: center">
+            <button type="file" class="btn btn-primary">upload</button>
           </div>
         </div>
       </div>
     </div>
+
   </div>
 </main>
 

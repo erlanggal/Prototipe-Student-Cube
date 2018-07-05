@@ -4,11 +4,10 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 @Controller
-public class ControllerPekerjaan {
+public class ControllerKategoriUmkm {
 
-    @RequestMapping({"pekerjaan"})
-    public String getPage()
-    {
-        return "pekerjaan";
+    @RequestMapping({"kategori-umkm"})
+    public String getPage(){
+        return "kategori-umkm";
     }
 }
