@@ -43,3 +43,6 @@ var Dashboard = function () {
 }();
 
 Dashboard.init();
+
+var heights = window.innerHeight;
+document.getElementById("resize-height").style.height = heights - 202 +"px";;

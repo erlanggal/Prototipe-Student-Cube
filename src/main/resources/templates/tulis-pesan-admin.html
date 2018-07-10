@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="UTF-8">
-    <title>Daftar UMKM</title>
+    <title>Tulis Pesan</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
     <link rel='stylesheet prefetch' href='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css'>
     <link rel='stylesheet prefetch' href='https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css'>
@@ -45,7 +45,7 @@
         <nav class="c-menu js-menu">
             <ul class="u-list">
                 <li class="c-menu__item has-submenu" data-toggle="tooltip" title="Beranda">
-                    <a th:href="@{'home'}">
+                    <a th:href="@{'home-admin'}">
                         <div class="c-menu__item__inner">
                             <i class="fa fa-home"></i>
                             <div class="c-menu-item__title">
@@ -56,8 +56,8 @@
                         </div>
                     </a>
                 </li>
-                <li class="c-menu__item has-submenu" data-toggle="tooltip" title="Notifikasi">
-                    <a th:href="@{'kotak-masuk'}">
+                <li class="c-menu__item is-active" data-toggle="tooltip" title="Notifikasi">
+                    <a th:href="@{'kotak-masuk-admin'}">
                         <div class="c-menu__item__inner">
                             <i class="fa fa-bell"></i>
                             <div class="c-menu-item__title">
@@ -68,20 +68,20 @@
                         </div>
                     </a>
                 </li>
-                <li class="c-menu__item is-active" data-toggle="tooltip" title="Pekerjaan">
-                    <a th:href="@{'kategori-umkm'}">
+                <li class="c-menu__item has-submenu" data-toggle="tooltip" title="Pekerjaan">
+                    <a th:href="@{'daftar-mahasiswa'}">
                         <div class="c-menu__item__inner">
                             <i class="fas fa-briefcase "></i>
                             <div class="c-menu-item__title">
                                     <span>
-                                        UMKM
+                                        Daftar Mahasiswa
                                     </span>
                             </div>
                         </div>
                     </a>
                 </li>
                 <li class="c-menu__item has-submenu" data-toggle="tooltip" title="Profil">
-                    <a th:href="@{'profil'}">
+                    <a th:href="@{'profil-admin'}">
                         <div class="c-menu__item__inner">
                             <i class="fa fa-user"></i>
                             <div class="c-menu-item__title">
@@ -93,7 +93,7 @@
                     </a>
                 </li>
                 <li class="c-menu__item has-submenu" data-toggle="tooltip" title="Profil">
-                    <a th:href="@{'home-admin'}">
+                    <a th:href="@{'home'}">
                         <div class="c-menu__item__inner">
                             <i class="fas fa-exchange-alt"></i>
                             <div class="c-menu-item__title">
@@ -112,76 +112,34 @@
 
 <main class="l-main">
     <div class="content-wrapper content-wrapper--with-bg">
-        <h1 class="page-title">Pangan</h1>
         <div class="col-md-12">
-            <div class="umkm-description">
-                <a th:href="@{'detail-umkm'}">
-                    <table>
-                        <tr>
-                            <td colspan="2">Keripik Padasuka</td>
-                        </tr>
+            <table class="form-compose-message">
+                <tr>
+                    <td>
+                        <input type="text" placeholder="Tujuan" style="width: 250px">
+                    </td>
+                </tr>
 
-                        <tr>
-                            <td>Lokasi</td>
-                            <td>Jakarta</td>
-                        </tr>
+                <tr>
+                    <td>
+                        <input type="text" placeholder="Subjek" style="width: 400px">
+                    </td>
+                </tr>
 
-                        <tr>
-                            <td>Deskripsi</td>
-                            <td>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur dictum enim et mi sollicitudin,
-                                id convallis est efficitur. Etiam laoreet porta faucibus. Vivamus mattis magna finibus ultrices
-                                pretium. Donec non mattis turpis. Sed hendrerit, dui et finibus interdum, ex nulla ultrices
-                                ipsum, id pretium mauris diam eu ipsum ...</td>
-                        </tr>
-                    </table>
-                </a>
-            </div>
+                <tr>
+                    <td>
+                        <textarea cols="150" rows="17" placeholder="Isi Pesan"></textarea>
+                    </td>
+                </tr>
 
-            <div class="umkm-description space-between-div-top">
-                <a th:href="@{'detail-umkm'}">
-                    <table>
-                        <tr>
-                            <td colspan="2">Nasi Kotak Valen</td>
-                        </tr>
-
-                        <tr>
-                            <td>Lokasi</td>
-                            <td>Bekasi</td>
-                        </tr>
-
-                        <tr>
-                            <td>Deskripsi</td>
-                            <td>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur dictum enim et mi sollicitudin,
-                                id convallis est efficitur. Etiam laoreet porta faucibus. Vivamus mattis magna finibus ultrices
-                                pretium. Donec non mattis turpis. Sed hendrerit, dui et finibus interdum, ex nulla ultrices
-                                ipsum, id pretium mauris diam eu ipsum ...</td>
-                        </tr>
-                    </table>
-                </a>
-            </div>
-
-            <div class="umkm-description space-between-div-top">
-                <a th:href="@{'detail-umkm'}">
-                    <table>
-                        <tr>
-                            <td colspan="2">Sambal Matah Ojolali</td>
-                        </tr>
-
-                        <tr>
-                            <td>Lokasi</td>
-                            <td>Jakarta</td>
-                        </tr>
-
-                        <tr>
-                            <td>Deskripsi</td>
-                            <td>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur dictum enim et mi sollicitudin,
-                                id convallis est efficitur. Etiam laoreet porta faucibus. Vivamus mattis magna finibus ultrices
-                                pretium. Donec non mattis turpis. Sed hendrerit, dui et finibus interdum, ex nulla ultrices
-                                ipsum, id pretium mauris diam eu ipsum ...</td>
-                        </tr>
-                    </table>
-                </a>
-            </div>
+                <tr>
+                    <td colspan="2">
+                        <a th:href="@{'kotak-masuk-admin'}">
+                            <button type="button" class="btn btn-primary">Kirim</button>
+                        </a>
+                    </td>
+                </tr>
+            </table>
         </div>
     </div>
 </main>

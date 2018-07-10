@@ -45,7 +45,7 @@
         <nav class="c-menu js-menu">
             <ul class="u-list">
                 <li class="c-menu__item has-submenu" data-toggle="tooltip" title="Beranda">
-                    <a th:href="@{'index'}">
+                    <a th:href="@{'home'}">
                         <div class="c-menu__item__inner">
                             <i class="fa fa-home"></i>
                             <div class="c-menu-item__title">
@@ -92,6 +92,18 @@
                         </div>
                     </a>
                 </li>
+                <li class="c-menu__item has-submenu" data-toggle="tooltip" title="Profil">
+                    <a th:href="@{'home-admin'}">
+                        <div class="c-menu__item__inner">
+                            <i class="fas fa-exchange-alt"></i>
+                            <div class="c-menu-item__title">
+                                    <span>
+                                        Ganti Akun
+                                    </span>
+                            </div>
+                        </div>
+                    </a>
+                </li>
             </ul>
         </nav>
     </div>
@@ -118,7 +130,9 @@
                 </div>
 
                 <div class="apply-button space-between-div-top">
-                    <button type="button" class="btn btn-primary">Lamar</button>
+                    <a th:href="@{'daftar-umkm'}">
+                        <button type="button" class="btn btn-primary">Lamar</button>
+                    </a>
                 </div>
             </div>
 

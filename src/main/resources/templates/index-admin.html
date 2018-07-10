@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="UTF-8">
-    <title>Card Board Activity</title>
+    <title>Beranda</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
     <link rel='stylesheet prefetch' href='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css'>
     <link rel='stylesheet prefetch' href='https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css'>
@@ -45,7 +45,7 @@
         <nav class="c-menu js-menu">
             <ul class="u-list">
                 <li class="c-menu__item is-active" data-toggle="tooltip" title="Beranda">
-                    <a th:href="@{'home'}">
+                    <a th:href="@{'home-admin'}">
                         <div class="c-menu__item__inner">
                             <i class="fa fa-home"></i>
                             <div class="c-menu-item__title">
@@ -57,7 +57,7 @@
                     </a>
                 </li>
                 <li class="c-menu__item has-submenu" data-toggle="tooltip" title="Notifikasi">
-                    <a th:href="@{'kotak-masuk'}">
+                    <a th:href="@{'kotak-masuk-admin'}">
                         <div class="c-menu__item__inner">
                             <i class="fa fa-bell"></i>
                             <div class="c-menu-item__title">
@@ -69,19 +69,19 @@
                     </a>
                 </li>
                 <li class="c-menu__item has-submenu" data-toggle="tooltip" title="Pekerjaan">
-                    <a th:href="@{'kategori-umkm'}">
+                    <a th:href="@{'daftar-mahasiswa'}">
                         <div class="c-menu__item__inner">
                             <i class="fas fa-briefcase "></i>
                             <div class="c-menu-item__title">
                   <span>
-                    UMKM
+                    Daftar Mahasiswa
                   </span>
                             </div>
                         </div>
                     </a>
                 </li>
                 <li class="c-menu__item has-submenu" data-toggle="tooltip" title="Profil">
-                    <a th:href="@{'profil'}">
+                    <a th:href="@{'profil-admin'}">
                         <div class="c-menu__item__inner">
                             <i class="fa fa-user"></i>
                             <div class="c-menu-item__title">
@@ -93,7 +93,7 @@
                     </a>
                 </li>
                 <li class="c-menu__item has-submenu" data-toggle="tooltip" title="Profil">
-                    <a th:href="@{'home-admin'}">
+                    <a th:href="@{'home'}">
                         <div class="c-menu__item__inner">
                             <i class="fas fa-exchange-alt"></i>
                             <div class="c-menu-item__title">
@@ -112,36 +112,93 @@
 
 <main class="l-main">
     <div class="content-wrapper content-wrapper--with-bg">
-        <div class="col-md-12">
-            <h1>Card Board</h1>
-            <table class="form-compose-message">
-                <tr>
-                    <td>
-                        <input type="text" placeholder="Kegiatan" style="width: 400px">
-                    </td>
-                </tr>
+        <div class="row">
+            <div class="col-md-6">
+                <div class="cardboards">
+                    <h1>Erlangga Laimena</h1>
+                    <hr>
 
-                <tr>
-                    <td>
-                        <input type="date" placeholder="Tanggal" style="width: 400px">
-                    </td>
-                </tr>
+                    <div class="container-cardboard resize-height">
+                        <div class="cardboard">
+                            <table>
+                                <tr>
+                                    <td colspan="2">Pemantauan kualitas bahan baku</td>
+                                </tr>
 
-                <tr>
-                    <td>
-                        <textarea cols="70" rows="6" placeholder="Keterangan" maxlength="280"></textarea>
-                    </td>
-                </tr>
+                                <tr>
+                                    <td>Tanggal</td>
+                                    <td class="custom-width-td">05-07-2018</td>
+                                </tr>
 
-                <tr>
-                    <td>
-                        <a th:href="@{'index'}">
-                            <button type="button" class="btn btn-primary">Kirim</button>
+                                <tr>
+                                    <td>Keterangan</td>
+                                    <td class="custom-width-td">-</td>
+                                </tr>
+                            </table>
+                        </div>
+
+                        <div class="cardboard space-between-div-top">
+                            <table>
+                                <tr>
+                                    <td colspan="2">Pembahasan strategi pemasaran</td>
+                                </tr>
+
+                                <tr>
+                                    <td>Tanggal</td>
+                                    <td class="custom-width-td">03-07-2018</td>
+                                </tr>
+
+                                <tr>
+                                    <td>Keterangan</td>
+                                    <td class="custom-width-td">-</td>
+                                </tr>
+                            </table>
+                        </div>
+
+                        <div class="cardboard space-between-div-top">
+                            <table>
+                                <tr>
+                                    <td colspan="2">Pertemuan dengan pemilik Keripik Padasuka</td>
+                                </tr>
+
+                                <tr>
+                                    <td>Tanggal</td>
+                                    <td class="custom-width-td">30-06-2018</td>
+                                </tr>
+
+                                <tr>
+                                    <td>Keterangan</td>
+                                    <td class="custom-width-td">
+                                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam quis vulputate est, nec sagittis tellus. Curabitur quis
+                                        sem in sem pulvinar lobortis ut vitae quam. Nulla pulvinar dictum ante, eu molestie
+                                        enim tincidunt ac. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</td>
+                                </tr>
+                            </table>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="col-md-1"></div>
+
+            <div class="col-md-3">
+                <div class="laporan-keuangan">
+
+                    <h1>Laporan Keuangan</h1>
+                    <br>
+
+                    <div class="chart-button">
+                        <a th:href="@{/file/laporanKeuangan.xlsx}" download="Laporan Keuangan">
+                            <i class="fas fa-chart-line"></i>
                         </a>
-                    </td>
-                </tr>
-            </table>
+                    </div>
+
+                </div>
+            </div>
         </div>
+
     </div>
 </main>
 

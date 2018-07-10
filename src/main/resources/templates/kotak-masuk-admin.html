@@ -45,7 +45,7 @@
             <nav class="c-menu js-menu">
                 <ul class="u-list">
                     <li class="c-menu__item has-submenu" data-toggle="tooltip" title="Beranda">
-                        <a th:href="@{'home'}">
+                        <a th:href="@{'home-admin'}">
                             <div class="c-menu__item__inner">
                                 <i class="fa fa-home"></i>
                                 <div class="c-menu-item__title">
@@ -57,7 +57,7 @@
                         </a>
                     </li>
                     <li class="c-menu__item is-active" data-toggle="tooltip" title="Notifikasi">
-                        <a th:href="@{'kotak-masuk'}">
+                        <a th:href="@{'kotak-masuk-admin'}">
                             <div class="c-menu__item__inner">
                                 <i class="fa fa-bell"></i>
                                 <div class="c-menu-item__title">
@@ -69,19 +69,19 @@
                         </a>
                     </li>
                     <li class="c-menu__item has-submenu" data-toggle="tooltip" title="Pekerjaan">
-                        <a th:href="@{'kategori-umkm'}">
+                        <a th:href="@{'daftar-mahasiswa'}">
                             <div class="c-menu__item__inner">
                                 <i class="fas fa-briefcase "></i>
                                 <div class="c-menu-item__title">
                                     <span>
-                                        UMKM
+                                        Daftar Mahasiswa
                                     </span>
                                 </div>
                             </div>
                         </a>
                     </li>
                     <li class="c-menu__item has-submenu" data-toggle="tooltip" title="Profil">
-                        <a th:href="@{'profil'}">
+                        <a th:href="@{'profil-admin'}">
                             <div class="c-menu__item__inner">
                                 <i class="fa fa-user"></i>
                                 <div class="c-menu-item__title">
@@ -93,7 +93,7 @@
                         </a>
                     </li>
                     <li class="c-menu__item has-submenu" data-toggle="tooltip" title="Profil">
-                        <a th:href="@{'home-admin'}">
+                        <a th:href="@{'home'}">
                             <div class="c-menu__item__inner">
                                 <i class="fas fa-exchange-alt"></i>
                                 <div class="c-menu-item__title">
@@ -115,21 +115,14 @@
         <h1 class="page-title">Kotak Masuk</h1>
         <div class="col-md-12">
             <div class="message">
-                <a th:href="@{'pesan'}">
-                    <h3>Keripik Padasuka</h3>
-                    <h4>Pertemuan untuk membicarakan detail pekerjaan</h4>
-                </a>
-            </div>
-
-            <div class="message sub-message">
-                <a href="@{'pesan'}">
-                    <h3>PT ABC</h3>
+                <a th:href="@{'pesan-admin'}">
+                    <h3>Erlangga Laimena</h3>
                     <h4>Pertemuan untuk membicarakan detail pekerjaan</h4>
                 </a>
             </div>
 
             <div class="compose-button">
-                <a th:href="@{'tulis-pesan'}">
+                <a th:href="@{'tulis-pesan-admin'}">
                     <button type="button" class="btn btn-primary">Tulis Pesan Baru</button>
                 </a>
             </div>

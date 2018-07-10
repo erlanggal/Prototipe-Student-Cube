@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="UTF-8">
-    <title>Kotak Masuk</title>
+    <title>Profil</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
     <link rel='stylesheet prefetch' href='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css'>
     <link rel='stylesheet prefetch' href='https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css'>
@@ -45,7 +45,7 @@
             <nav class="c-menu js-menu">
                 <ul class="u-list">
                     <li class="c-menu__item has-submenu" data-toggle="tooltip" title="Beranda">
-                        <a th:href="@{'home'}">
+                        <a th:href="@{'home-admin'}">
                             <div class="c-menu__item__inner">
                                 <i class="fa fa-home"></i>
                                 <div class="c-menu-item__title">
@@ -56,8 +56,8 @@
                             </div>
                         </a>
                     </li>
-                    <li class="c-menu__item is-active" data-toggle="tooltip" title="Notifikasi">
-                        <a th:href="@{'kotak-masuk'}">
+                    <li class="c-menu__item has-submenu" data-toggle="tooltip" title="Notifikasi">
+                        <a th:href="@{'kotak-masuk-admin'}">
                             <div class="c-menu__item__inner">
                                 <i class="fa fa-bell"></i>
                                 <div class="c-menu-item__title">
@@ -68,20 +68,20 @@
                             </div>
                         </a>
                     </li>
-                    <li class="c-menu__item has-submenu" data-toggle="tooltip" title="Pekerjaan">
-                        <a th:href="@{'kategori-umkm'}">
+                    <li class="c-menu__item is-active" data-toggle="tooltip" title="Pekerjaan">
+                        <a th:href="@{'daftar-mahasiswa'}">
                             <div class="c-menu__item__inner">
                                 <i class="fas fa-briefcase "></i>
                                 <div class="c-menu-item__title">
                                     <span>
-                                        UMKM
+                                        Daftar Mahasiswa
                                     </span>
                                 </div>
                             </div>
                         </a>
                     </li>
                     <li class="c-menu__item has-submenu" data-toggle="tooltip" title="Profil">
-                        <a th:href="@{'profil'}">
+                        <a th:href="@{'profil-admin'}">
                             <div class="c-menu__item__inner">
                                 <i class="fa fa-user"></i>
                                 <div class="c-menu-item__title">
@@ -93,7 +93,7 @@
                         </a>
                     </li>
                     <li class="c-menu__item has-submenu" data-toggle="tooltip" title="Profil">
-                        <a th:href="@{'home-admin'}">
+                        <a th:href="@{'home'}">
                             <div class="c-menu__item__inner">
                                 <i class="fas fa-exchange-alt"></i>
                                 <div class="c-menu-item__title">
@@ -112,27 +112,51 @@
 
 <main class="l-main">
     <div class="content-wrapper content-wrapper--with-bg">
-        <h1 class="page-title">Kotak Masuk</h1>
-        <div class="col-md-12">
-            <div class="message">
-                <a th:href="@{'pesan'}">
-                    <h3>Keripik Padasuka</h3>
-                    <h4>Pertemuan untuk membicarakan detail pekerjaan</h4>
-                </a>
+        <h1 class="page-title">Biodata Mahasiswa</h1>
+
+        <div class="container-profil">
+
+            <div class="row">
+
+                <div class="d-flex justify-content-center">
+
+                    <div class="col-md-3">
+                        <div class="display-picture">
+                            <img src="http://via.placeholder.com/250x250">
+                        </div>
+                    </div>
+
+                    <div class="col-md-9">
+                        <div class="name-section">
+                            <p class="font-size-25">Erlangga Laimena</p>
+                            <p class="font-size-17">erlanggalaimena@gmail.com</p>
+                            <br>
+                        </div>
+
+                        <div class="description-section">
+                            <p class="font-size-17">Nomor Telepon : +621 0000 0000 000</p>
+                            <p class="font-size-17">CV :
+                                <a href="file/CV Example.pdf" download="CV Erlangga" style="color: red">
+                                    <i class="far fa-file-pdf"></i>
+                                </a>
+                            </p>
+
+                            <p>
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent a ante vel est aliquam luctus nec eget ipsum. Aenean aliquam
+                                finibus leo, id interdum neque pharetra vitae. Aliquam rutrum ultrices sagittis. Praesent
+                                scelerisque eget dui pulvinar varius. Suspendisse sed sapien at erat faucibus imperdiet.
+                                Aliquam erat volutpat. Suspendisse rutrum massa semper orci faucibus posuere. Pellentesque
+                                suscipit laoreet eleifend. Nam risus erat, laoreet at felis non, tincidunt ullamcorper erat.
+                                Maecenas pretium nisl ligula, ac pellentesque sem gravida in. Suspendisse consequat est sed
+                                convallis faucibus. Cras scelerisque placerat turpis, nec tempor nisi tempor id. Nulla non
+                                nulla a est congue rutrum a in justo.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
             </div>
 
-            <div class="message sub-message">
-                <a href="@{'pesan'}">
-                    <h3>PT ABC</h3>
-                    <h4>Pertemuan untuk membicarakan detail pekerjaan</h4>
-                </a>
-            </div>
-
-            <div class="compose-button">
-                <a th:href="@{'tulis-pesan'}">
-                    <button type="button" class="btn btn-primary">Tulis Pesan Baru</button>
-                </a>
-            </div>
         </div>
     </div>
 </main>

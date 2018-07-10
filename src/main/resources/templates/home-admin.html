@@ -3,7 +3,7 @@
 
 <head>
   <meta charset="UTF-8">
-  <title>Profil</title>
+  <title>Beranda</title>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
   <link rel='stylesheet prefetch' href='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css'>
   <link rel='stylesheet prefetch' href='https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css'>
@@ -44,8 +44,8 @@
     <div class="l-sidebar__content">
       <nav class="c-menu js-menu">
         <ul class="u-list">
-          <li class="c-menu__item has-submenu" data-toggle="tooltip" title="Beranda">
-            <a th:href="@{'home'}">
+          <li class="c-menu__item is-active" data-toggle="tooltip" title="Beranda">
+            <a th:href="@{'home-admin'}">
               <div class="c-menu__item__inner">
                 <i class="fa fa-home"></i>
                 <div class="c-menu-item__title">
@@ -57,7 +57,7 @@
             </a>
           </li>
           <li class="c-menu__item has-submenu" data-toggle="tooltip" title="Notifikasi">
-            <a th:href="@{'kotak-masuk'}">
+            <a th:href="@{'kotak-masuk-admin'}">
               <div class="c-menu__item__inner">
                 <i class="fa fa-bell"></i>
                 <div class="c-menu-item__title">
@@ -69,19 +69,19 @@
             </a>
           </li>
           <li class="c-menu__item has-submenu" data-toggle="tooltip" title="Pekerjaan">
-            <a th:href="@{'kategori-umkm'}">
+            <a th:href="@{'daftar-mahasiswa'}">
               <div class="c-menu__item__inner">
                 <i class="fas fa-briefcase "></i>
                 <div class="c-menu-item__title">
                   <span>
-                    UMKM
+                    Daftar Mahasiswa
                   </span>
                 </div>
               </div>
             </a>
           </li>
-          <li class="c-menu__item is-active" data-toggle="tooltip" title="Profil">
-            <a th:href="@{'profil'}">
+          <li class="c-menu__item has-submenu" data-toggle="tooltip" title="Profil">
+            <a th:href="@{'profil-admin'}">
               <div class="c-menu__item__inner">
                 <i class="fa fa-user"></i>
                 <div class="c-menu-item__title">
@@ -93,7 +93,7 @@
             </a>
           </li>
           <li class="c-menu__item has-submenu" data-toggle="tooltip" title="Profil">
-            <a th:href="@{'home-admin'}">
+            <a th:href="@{'home'}">
               <div class="c-menu__item__inner">
                 <i class="fas fa-exchange-alt"></i>
                 <div class="c-menu-item__title">
@@ -112,65 +112,91 @@
 
 <main class="l-main">
   <div class="content-wrapper content-wrapper--with-bg">
-    <h1 class="page-title">Pekerjaan</h1>
-    <div class="col-md-4">
-      <div class="d-flex flex-column">
-        <div class="profile-picture">
-          <i class="fa fa-user"></i>
-          <br>
+    <div class="row">
+      <div class="col-md-6">
+        <h1>News</h1>
+        <br>
+
+        <div class="primary-news">
+          <a href="https://www.liputan6.com/bisnis/read/3581187/3-kelemahan-ini-bikin-umkm-sulit-bersaing">
+            <img src="images/image-landscape.jpg" alt="logo">
+
+            <div class="caption">
+              <p class="news-title">3 Kelemahan Bikin UMKM Sulit Bersaing</p>
+              <p class="news-date">07/07/2018</p>
+            </div>
+          </a>
         </div>
 
-        <div class="profile-name">
-          <p>Erlangga Laimena</p>
-        </div>
-      </div>
-    </div>
+        <div class="d-flex justify-content-start">
+          <div class="col-md-4 container-news">
+            <div class="secondary-news">
+              <a href="https://www.liputan6.com/bisnis/read/3581067/umkm-sumbang-60-persen-ke-pertumbuhan-ekonomi-nasional">
+                <img src="images/image-landscape.jpg" alt="logo">
 
-    <div class="col-md-8">
-      <div class="user-information">
-        <table>
-          <tr>
-            <td>Telepon</td>
-            <td>000000000000</td>
-          </tr>
-
-          <tr>
-            <td>Email</td>
-            <td>erlanggalaimena@gmail.com</td>
-          </tr>
-
-          <tr>
-            <td>Kemampuan</td>
-            <td>Kemampuan A</td>
-          </tr>
-
-          <tr>
-            <td></td>
-            <td>Kemampuan B</td>
-          </tr>
-
-
-          <tr>
-            <td></td>
-            <td>Kemampuan C</td>
-          </tr>
-
-          <tr>
-            <td></td>
-            <td>Kemampuan D</td>
-          </tr>
-
-          <tr>
-            <td>CV</td>
-            <td>
-              <a th:href="@{/file/CV Example.pdf}" download="CV Erlangga" style="color: red">
-                <i class="far fa-file-pdf"></i>
+                <div class="caption-secondary">
+                  <p class="news-title-secondary">UMKM Sumbang 60 Persen Pertumbuhan Ekonomi Nasioal</p>
+                </div>
               </a>
-            </td>
-          </tr>
-        </table>
+            </div>
+          </div>
+
+          <div class="col-md-4 container-news">
+            <div class="secondary-news">
+              <a href="https://www.liputan6.com/bisnis/read/3581056/ingin-naik-kelas-umkm-harus-jago-pembukuan">
+                <img src="images/image-landscape.jpg" alt="logo">
+
+                <div class="caption-secondary">
+                  <p class="news-title-secondary">Ingin Naik Kelas, UMKM Harus Jago Pembukuan</p>
+                </div>
+              </a>
+            </div>
+          </div>
+
+          <div class="col-md-4 container-news">
+            <div class="secondary-news">
+              <a href="https://www.liputan6.com/bisnis/read/3572181/pelaku-umkm-mau-insentif-pajak-coba-pakai-metode-laporan-keuangan-ini">
+                <img src="images/image-landscape.jpg" alt="logo">
+
+                <div class="caption-secondary">
+                  <p class="news-title-secondary">Pelaku UMKM Mau Insentif Pajak? Coba Pakai Metode Keuangan ini</p>
+                </div>
+              </a>
+            </div>
+          </div>
+        </div>
       </div>
+
+      <div class="col-md-6">
+        <div class="status">
+
+          <h1>Mitra</h1>
+          <br>
+
+          <div class="umkm-list-container" id="resize-height">
+
+            <div class="umkm-list">
+
+              <a th:href="@{'index-admin'}">
+                <div class="umkm-list-header">
+                  <h2>Mahasiswa</h2>
+                </div>
+
+                <h1>Erlangga Laimena</h1>
+
+                <div class="umkm-list-footer">
+                  <h3>erlanggalaimena@gmail.com</h3>
+                </div>
+              </a>
+
+            </div>
+
+          </div>
+        </div>
+      </div>
+
     </div>
+
   </div>
 </main>
 
